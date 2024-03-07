@@ -3,6 +3,7 @@
 - ¿Cómo testeamos que ciertas excepciones sean lanzadas?
 - Mostrar cuantas clases cambian al agregar nuevo requerimiento si no encapsulo
 - Usuario no seria un objeto completo ni bien se instancia
-- Refactoring manual
-- Sacamos los setters, creamos constructor
-- Refactoring Automático: "Move instance Method..."
+- Refactoring:
+    - "Move instance Method..."
+    - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.
+    - Sacamos los getters. Un objeto que encapsula una password **nunca** deberia tener un getter.

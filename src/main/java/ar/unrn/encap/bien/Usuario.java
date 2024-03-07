@@ -9,7 +9,7 @@ public class Usuario {
         this.clave = clave;
     }
 
-    public boolean tieneLaClave(String posibleClave) {
+    boolean tieneLaClave(String posibleClave) {
         return this.clave.equals(posibleClave);
     }
 

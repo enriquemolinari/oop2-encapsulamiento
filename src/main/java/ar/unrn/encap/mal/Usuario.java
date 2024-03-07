@@ -19,4 +19,18 @@ public class Usuario {
     public void setClave(String clave) {
         this.clave = clave;
     }
+
+    public void cambiarClave(String claveActual,
+                             String nuevaClave, String nuevaClaveRepetida) {
+
+        if (!getClave().equals(claveActual)) {
+            throw new RuntimeException("No coincide con la actual...");
+        }
+
+        if (!nuevaClave.equals(nuevaClaveRepetida)) {
+            throw new RuntimeException("No coinciden...");
+        }
+
+        setClave(nuevaClave);
+    }
 }

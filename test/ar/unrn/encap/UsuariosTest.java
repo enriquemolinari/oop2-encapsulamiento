@@ -16,7 +16,7 @@ public class UsuariosTest {
         user1.setClave("pwd123");
 
         var manager = new UsuariosManager();
-        manager.cambiarClave(user1,
+        user1.cambiarClave(
                 "pwd123",
                 "123pwd",
                 "123pwd");
@@ -32,7 +32,7 @@ public class UsuariosTest {
 
         var manager = new UsuariosManager();
         assertThrows(RuntimeException.class, () -> {
-            manager.cambiarClave(user1,
+            user1.cambiarClave(
                     "pwd9993",
                     "123pwd",
                     "123pwd");
@@ -48,7 +48,7 @@ public class UsuariosTest {
 
         var manager = new UsuariosManager();
         assertThrows(RuntimeException.class, () -> {
-            manager.cambiarClave(user1,
+            user1.cambiarClave(
                     "pwd123",
                     "123pwd",
                     "13pwd");

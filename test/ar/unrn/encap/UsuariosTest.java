@@ -11,12 +11,10 @@ public class UsuariosTest {
 
     @Test
     public void cambioDeClaveOk() {
-        var user1 = new Usuario();
-        user1.setNombreUsuario("user1");
-        user1.setClave("pwd123");
+        var user1 = new Usuario("user1", "pwd123");
 
         var manager = new UsuariosManager();
-        user1.cambiarClave(
+        manager.cambiarClave(user1,
                 "pwd123",
                 "123pwd",
                 "123pwd");
@@ -26,13 +24,11 @@ public class UsuariosTest {
 
     @Test
     public void cambioDeClaveContrasenaActualNoCoincide() {
-        var user1 = new Usuario();
-        user1.setNombreUsuario("user1");
-        user1.setClave("pwd123");
+        var user1 = new Usuario("user1", "pwd123");
 
         var manager = new UsuariosManager();
         assertThrows(RuntimeException.class, () -> {
-            user1.cambiarClave(
+            manager.cambiarClave(user1,
                     "pwd9993",
                     "123pwd",
                     "123pwd");
@@ -42,13 +38,11 @@ public class UsuariosTest {
 
     @Test
     public void cambioDeClaveNuevaClaveNoCoincide() {
-        var user1 = new Usuario();
-        user1.setNombreUsuario("user1");
-        user1.setClave("pwd123");
+        var user1 = new Usuario("user1", "pwd123");
 
         var manager = new UsuariosManager();
         assertThrows(RuntimeException.class, () -> {
-            user1.cambiarClave(
+            manager.cambiarClave(user1,
                     "pwd123",
                     "123pwd",
                     "13pwd");

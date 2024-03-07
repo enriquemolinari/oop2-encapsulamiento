@@ -9,18 +9,14 @@ public class Usuario {
         this.clave = clave;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
-    }
-
-    public String getClave() {
-        return clave;
+    public boolean tieneLaClave(String posibleClave) {
+        return this.clave.equals(posibleClave);
     }
 
     public void cambiarClave(String claveActual,
                              String nuevaClave, String nuevaClaveRepetida) {
 
-        if (!getClave().equals(claveActual)) {
+        if (!this.clave.equals(claveActual)) {
             throw new RuntimeException("No coincide con la actual...");
         }
 

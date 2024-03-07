@@ -4,8 +4,8 @@ import ar.unrn.encap.mal.Usuario;
 import ar.unrn.encap.mal.UsuariosManager;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class UsuariosTest {
 
@@ -19,7 +19,7 @@ public class UsuariosTest {
                 "123pwd",
                 "123pwd");
 
-        assertEquals("123pwd", user1.getClave());
+        assertTrue(user1.tieneLaClave("123pwd"));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class UsuariosTest {
                     "123pwd",
                     "123pwd");
         });
-        assertEquals("pwd123", user1.getClave());
+        assertTrue(user1.tieneLaClave("pwd123"));
     }
 
     @Test
@@ -47,6 +47,6 @@ public class UsuariosTest {
                     "123pwd",
                     "13pwd");
         });
-        assertEquals("pwd123", user1.getClave());
+        assertTrue(user1.tieneLaClave("pwd123"));
     }
 }

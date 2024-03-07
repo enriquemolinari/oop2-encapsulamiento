@@ -1,4 +1,4 @@
-package ar.unrn.encap.mal;
+package ar.unrn.encap.bien;
 
 public class UsuariosManager {
 

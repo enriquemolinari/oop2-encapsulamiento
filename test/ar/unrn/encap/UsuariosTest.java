@@ -1,7 +1,7 @@
 package ar.unrn.encap;
 
-import ar.unrn.encap.mal.Usuario;
-import ar.unrn.encap.mal.UsuariosManager;
+import ar.unrn.encap.bien.Usuario;
+import ar.unrn.encap.bien.UsuariosManager;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;

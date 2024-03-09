@@ -16,7 +16,11 @@ public class CarritoCompras {
         this.productos.add(producto);
     }
 
-    public List<Producto> getProductos() {
-        return this.productos;
+    public float calcularCosto() {
+        float total = 0;
+        for (Producto producto : this.productos) {
+            total += producto.precio();
+        }
+        return total;
     }
 }

@@ -8,3 +8,19 @@
     - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.
     - Sacamos los getters. Un objeto que encapsula una password **nunca** deberia tener un getter.
 - Implementamos el nuevo requerimiento y lo testeamos.
+
+# Tell Don't Ask
+
+- No preguntas por su estado para hacer algo con ellos. Pedile que lo haga por vos !
+
+# Demeter Law
+
+Original Paper: [OOP:
+An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
+
+- Restringe el conjunto de objetos al que le puedo enviar mensajes. Dado un Objeto *o* y un método de instancia *m*,
+  solo se permite enviarle mensajes a:
+    - Otros métodos definidos en *o*.
+    - Objetos que recibe *m* por parámetro.
+    - Colaboradores definidos como variables de instancia de *o*.
+    - Otros objetos creados en *m*.

@@ -11,7 +11,8 @@
 
 # Tell Don't Ask
 
-- No preguntas por su estado para hacer algo con ellos. Pedile que lo haga por vos !
+- No preguntas por su estado para hacer algo con el. Pedile que lo haga por vos !
+- Básicamente es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.
 
 # Demeter Law
 
@@ -24,3 +25,4 @@ An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/la
     - Objetos que recibe *m* por parámetro.
     - Colaboradores definidos como variables de instancia de *o*.
     - Otros objetos creados en *m*.
+- Al igual que Tell don't Ask, es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.

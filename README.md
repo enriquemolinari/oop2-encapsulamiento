@@ -8,6 +8,7 @@
     - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.
     - Sacamos los getters. Un objeto que encapsula una password **nunca** deberia tener un getter.
 - Implementamos el nuevo requerimiento y lo testeamos.
+- Aseguramos invariantes (invariante: condición que debe mantenerse verdadera)
 
 # Tell Don't Ask
 
@@ -26,3 +27,4 @@ An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/la
     - Colaboradores definidos como variables de instancia de *o*.
     - Otros objetos creados en *m*.
 - Al igual que Tell don't Ask, es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.
+- [The paperboy and the Wallet](https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf)

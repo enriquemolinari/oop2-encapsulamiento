@@ -8,6 +8,7 @@ public class Tren {
 
     public void reservarAsiento(PedidoReserva pedido) {
         for (Bagon bagon : bagones) {
+            // no respetamos la ley de demeter
             if (bagon.getAsientos().getPorcentajeRes() < limiteOcupacion) {
                 pedido.reservarAsientoEn(bagon);
                 return;

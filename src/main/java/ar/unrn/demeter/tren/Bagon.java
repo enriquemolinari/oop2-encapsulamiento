@@ -1,4 +1,4 @@
-package ar.unrn.demeter;
+package ar.unrn.demeter.tren;
 
 public class Bagon {
     private Asientos asientos;

@@ -17,7 +17,7 @@
 
 # Demeter Law
 
-Original Paper: [OOP:
+Original Paper (1988): [OOP:
 An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 
 - Restringe el conjunto de objetos al que le puedo enviar mensajes. Dado un Objeto *o* y un método de instancia *m*,
@@ -27,4 +27,9 @@ An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/la
     - Colaboradores definidos como variables de instancia de *o*.
     - Otros objetos creados en *m*.
 - Al igual que Tell don't Ask, es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.
-- [The paperboy and the Wallet](https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf)
+- Un ejemplo de
+  aplicación: [The paperboy and the Wallet](https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf)
+- Por los mismos autores del paper original en
+  1989, [Assuring Good Style for Object Oriented Programs](http://www.cs.nccu.edu.tw/~chenk/ADS/LH89-law-of-demeter.pdf)
+    - Es interesante leer la sección 6 Valid Violations: "The Law of Demeter is intended to act as a guideline not as an
+      absolute restriction".

@@ -1,3 +1,13 @@
+# Recomendaciones de Diseño
+
+- Objetos Completos (listos para ser usando ni bien se instancian) (Hernan Wilkinson).
+- No crear getters y setters indiscriminadamente.
+- Evitar setters (cuentaBancaria.setSaldo(...) vs cuentaBancaria.depositar(...))
+- tests siempre pasando ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
+- nombres que revelen intención ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
+- Sin código duplicado ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
+- Menor cantidad de elementos posible ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
+
 # Encapsulamiento
 
 - "Encapsular es ortorgar responsabilidades a los objetos correctamente". (Hernan Wilkinson)

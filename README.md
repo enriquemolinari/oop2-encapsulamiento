@@ -1,12 +1,14 @@
 # Recomendaciones de Diseño
 
 - Objetos Completos (listos para ser usando ni bien se instancian) (Hernan Wilkinson).
+- Objectos Válidos (Validaciones de negocio en el constructor) (Hernan Wilkinson)
 - No crear getters y setters indiscriminadamente.
 - Evitar setters (cuentaBancaria.setSaldo(...) vs cuentaBancaria.depositar(...))
-- tests siempre pasando ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
-- nombres que revelen intención ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
-- Sin código duplicado ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
-- Menor cantidad de elementos posible ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html))
+- Kent Beck XP's rules ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html)). En orden de prioridad:
+    - tests siempre pasando
+    - nombres que revelen intención
+    - Sin código duplicado
+    - Menor cantidad de elementos posible
 
 # Encapsulamiento
 

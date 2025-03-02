@@ -1,4 +1,4 @@
-package ar.unrn.demeter.paperboy;
+package ar.unrn.telldontask.paperboy;
 
 public class Billetera {
     private float efectivo;

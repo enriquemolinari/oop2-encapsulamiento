@@ -1,4 +1,4 @@
-package ar.unrn.telldontask;
+package ar.unrn.telldontask.carrito;
 
 public class Cliente {
 

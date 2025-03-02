@@ -1,5 +1,8 @@
 package ar.unrn.telldontask;
 
+import ar.unrn.telldontask.carrito.CarritoCompras;
+import ar.unrn.telldontask.carrito.Cliente;
+import ar.unrn.telldontask.carrito.Producto;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

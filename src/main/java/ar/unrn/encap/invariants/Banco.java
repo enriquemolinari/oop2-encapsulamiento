@@ -14,9 +14,13 @@ public class Banco {
 
     public void transferir(CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino, float saldo) {
         //Por otro lado, es probable que empiece a duplicar código en Banco, por ejemplo:
-        //var saldoActual = cuenta.getSaldo(); cuenta.setSaldo(saldoActual - saldo);
-        //Aca es donde comienzo a generar método privados dentro de Banco para sacar codigo duplicado
-        //y la solución no viene por ahi, sino por encontrar los objetos del modelo apropiados
-        //y mover lógica de negocios allí.
+//        var saldoActualOrigen = cuentaOrigen.getSaldo();
+//        cuentaOrigen.setSaldo(saldoActualOrigen - saldo);
+//
+//        var saldoActualDestino = cuentaDestino.getSaldo();
+//        cuentaDestino.setSaldo(saldoActualDestino + saldo);
+//        vs
+//        cuentaOrigen.retirar(saldo);
+//        cuentaDestino.depositar(saldo);
     }
 }

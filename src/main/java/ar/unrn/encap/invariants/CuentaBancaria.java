@@ -17,11 +17,15 @@ public class CuentaBancaria {
         this.saldo = saldo;
     }
 
-    //Invariante: el saldo nunca puede ser negativo
+    //Invariante: el saldo nunca puede ser negativo (regla de negocio)
     public void retirar(float saldo) {
         if (this.saldo < saldo) {
             throw new RuntimeException("No tiene saldo suficiente para retirar");
         }
         this.saldo -= saldo;
+    }
+
+    public void depositar(float saldo) {
+        this.saldo += saldo;
     }
 }

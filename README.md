@@ -1,7 +1,7 @@
 # Recomendaciones de Diseño
 
 1. Objetos Completos (listos para ser usados ni bien se instancian) (Hernan Wilkinson).
-2. Objectos Válidos (validaciones de negocio en el constructor) (Hernan Wilkinson)
+2. Objetos Válidos (validaciones de negocio en el constructor) (Hernan Wilkinson)
 3. No crear getters y setters indiscriminadamente.
 4. Honrar el encapsulamiento. Aplicar Tell Don't Ask.
 5. Si necesitamos un getter, que no devuelva un objeto mutable (evitar prefijo _get_).

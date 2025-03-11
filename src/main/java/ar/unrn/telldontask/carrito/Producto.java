@@ -18,4 +18,12 @@ public class Producto {
     public String descripcion() {
         return descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "descripcion='" + descripcion + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
 }

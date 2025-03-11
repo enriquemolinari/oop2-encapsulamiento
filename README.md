@@ -18,7 +18,6 @@
 - "Encapsular es ortorgar responsabilidades a los objetos correctamente". (Hernan Wilkinson)
     - https://www.youtube.com/watch?v=VEJa7xVfRj4 (Encapsulamiento HW - Nerdearla)
 - Mostrar cuantas clases cambian al agregar nuevo requerimiento si no encapsulo
-- Usuario no seria un objeto completo ni bien se instancia
 - Refactoring. Encapsular:
     - "Move instance Method..."
     - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.

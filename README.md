@@ -4,7 +4,7 @@
 2. Objectos Válidos (validaciones de negocio en el constructor) (Hernan Wilkinson)
 3. No crear getters y setters indiscriminadamente.
 4. Honrar el encapsulamiento. Aplicar Tell Don't Ask.
-5. Si necesitamos un getter, que no devuelva un objeto mutable (eviar prefijo _get_).
+5. Si necesitamos un getter, que no devuelva un objeto mutable (evitar prefijo _get_).
 6. Evitar setters (`cuentaBancaria.setSaldo(...)` vs `cuentaBancaria.retirar(...)`)
 
 - Kent Beck XP's rules ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html)). En orden de prioridad:

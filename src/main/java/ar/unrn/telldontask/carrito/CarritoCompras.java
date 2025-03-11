@@ -18,5 +18,9 @@ public class CarritoCompras {
 
     public List<Producto> getProductos() {
         return this.productos;
+        //si dejamos el getter, devolver copias y no objetos mutables
+        // return Collections.unmodifiableList(this.productos);
+        //return List.copyOf(this.productos);
+        //return this.productos.stream();
     }
 }

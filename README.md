@@ -7,6 +7,7 @@
 5. Si necesitamos un getter, que no devuelva un objeto mutable (evitar prefijo _get_).
     - Ejemplo: carrito.getProductos();
 6. Evitar setters (`cuentaBancaria.setSaldo(...)` vs `cuentaBancaria.retirar(...)`)
+7. Cambiar `if`s preguntando por el tipo de las clase por polimorfismo.
 
 - Kent Beck XP's rules ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html)). En orden de prioridad:
     - tests siempre pasando

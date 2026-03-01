@@ -17,6 +17,10 @@
 
 # Encapsulamiento
 
+- Diseñar en objetos pensando primero en clases vs pensar primero en los mensajes (comportamiento) es un punto de
+  inflexión en como diseñomos sistemas orientados a objetos. Cambiar la pregunta fundamental de diseño de "Sé que
+  necesito esta clase, ¿qué debería hacer?" a "Necesito enviar este mensaje, ¿quién debería responder a él?” es el
+  primer paso en esa dirección. (Sandi Metz)
 - "Encapsular es ortorgar responsabilidades a los objetos correctamente". (Hernan Wilkinson)
     - https://www.youtube.com/watch?v=VEJa7xVfRj4 (Encapsulamiento HW - Nerdearla)
 - Nuevo Requerimiento:

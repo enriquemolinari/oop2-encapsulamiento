@@ -1,14 +1,16 @@
 package ar.unrn.completosyvalidos;
 
-import java.time.MonthDay;
+import java.time.YearMonth;
 
 public class TarjetaCredito3 {
+    static final String NUMERO_INVALIDO = "Número de tarjeta inválido";
+    static final String TITULAR_DE_TARJETA_INVÁLIDO = "Titular de tarjeta inválido";
     private String numero;
     private String titular;
-    private MonthDay fechaVencimiento;
+    private YearMonth fechaVencimiento;
     private String codigoSeguridad;
 
-    public TarjetaCredito3(String numero, String titular, MonthDay fechaVencimiento, String codigoSeguridad) {
+    public TarjetaCredito3(String numero, String titular, YearMonth fechaVencimiento, String codigoSeguridad) {
         verificarNumero(numero);
         verificarTitular(titular);
         verificarFechaVencimiento(fechaVencimiento);
@@ -20,24 +22,24 @@ public class TarjetaCredito3 {
     }
 
     public boolean estaVencida() {
-        MonthDay hoy = MonthDay.now();
+        var hoy = YearMonth.now();
         return fechaVencimiento.isBefore(hoy);
     }
 
     private void verificarNumero(String numero) {
         if (numero == null || numero.length() != 16) {
-            throw new IllegalArgumentException("Número de tarjeta inválido");
+            throw new IllegalArgumentException(NUMERO_INVALIDO);
         }
     }
 
     private void verificarTitular(String titular) {
         if (titular == null || titular.isEmpty()) {
-            throw new IllegalArgumentException("Titular de tarjeta inválido");
+            throw new IllegalArgumentException(TITULAR_DE_TARJETA_INVÁLIDO);
         }
     }
 
-    private void verificarFechaVencimiento(MonthDay fechaVencimiento) {
-        if (fechaVencimiento == null || fechaVencimiento.isBefore(MonthDay.now())) {
+    private void verificarFechaVencimiento(YearMonth fechaVencimiento) {
+        if (fechaVencimiento == null || fechaVencimiento.isBefore(YearMonth.now())) {
             throw new IllegalArgumentException("Fecha de vencimiento inválida");
         }
     }

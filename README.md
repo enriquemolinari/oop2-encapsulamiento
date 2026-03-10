@@ -1,22 +1,21 @@
 # Recomendaciones de Diseño
 
-1. Objetos Completos (listos para ser usados ni bien se instancian) (Hernan Wilkinson).
-2. Objetos Válidos (validaciones de negocio en el constructor) (Hernan Wilkinson)
-3. No crear getters y setters indiscriminadamente.
-4. Honrar el encapsulamiento. Aplicar Tell Don't Ask.
-5. Si necesitamos un getter, que no devuelva un objeto mutable (evitar prefijo _get_).
+1. Honrar el encapsulamiento. Aplicar Tell Don't Ask.
+   1.1 No crear getters y setters indiscriminadamente (Kent Beck's Getting And Setting Methods).
+   1.2 Evitar setters (`cuentaBancaria.setSaldo(...)` vs `cuentaBancaria.retirar(...)`)
+2. Objetos Completos (listos para ser usados ni bien se instancian) (Kent Beck's Constructor Method).
+3. Objetos Válidos (validaciones de negocio en el constructor) (Kent Beck's Constructor Method)
+4. Si necesitamos un getter, que no devuelva un objeto mutable (evitar prefijo _get_) (Kent Beck's Collection Accesor
+   Method).
     - Ejemplo: carrito.getProductos();
-6. Evitar setters (`cuentaBancaria.setSaldo(...)` vs `cuentaBancaria.retirar(...)`)
-7. Cambiar `if`s preguntando por el tipo de las clase por polimorfismo.
-
-- Kent Beck XP's rules ([Kent Beck XP](https://martinfowler.com/bliki/BeckDesignRules.html)). En orden de prioridad:
-    - tests siempre pasando
-    - nombres que revelen intención
-    - Sin código duplicado
-    - Menor cantidad de elementos posible
+5. Cambiar `if`s preguntando por el tipo de las clase por polimorfismo. (Martin Fowler's Replace Conditional with
+   Polymorphism).
 
 # Encapsulamiento
 
+- Dos implementaciones no encapsuladas:
+    - Usuario y UsuariosManager
+    - Banco y CuentaBancaria
 - Diseñar en objetos pensando primero en clases vs pensar primero en los mensajes (comportamiento) es un punto de
   inflexión en como diseñamos sistemas orientados a objetos. Cambiar la pregunta fundamental de diseño de "Sé que
   necesito esta clase, ¿qué debería hacer?" a "Necesito enviar este mensaje, ¿quién debería responder a él?” es el

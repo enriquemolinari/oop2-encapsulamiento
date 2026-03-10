@@ -13,7 +13,6 @@ public class TarjetaCredito3 {
     public TarjetaCredito3(String numero, String titular, YearMonth fechaVencimiento, String codigoSeguridad) {
         verificarNumero(numero);
         verificarTitular(titular);
-        verificarFechaVencimiento(fechaVencimiento);
         verificarCodigoSeguridad(codigoSeguridad);
         this.numero = numero;
         this.titular = titular;
@@ -37,13 +36,7 @@ public class TarjetaCredito3 {
             throw new IllegalArgumentException(TITULAR_DE_TARJETA_INVÁLIDO);
         }
     }
-
-    private void verificarFechaVencimiento(YearMonth fechaVencimiento) {
-        if (fechaVencimiento == null || fechaVencimiento.isBefore(YearMonth.now())) {
-            throw new IllegalArgumentException("Fecha de vencimiento inválida");
-        }
-    }
-
+    
     private void verificarCodigoSeguridad(String codigoSeguridad) {
         if (codigoSeguridad == null || codigoSeguridad.length() != 3) {
             throw new IllegalArgumentException("Código de seguridad inválido");

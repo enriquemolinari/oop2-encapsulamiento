@@ -48,3 +48,6 @@
 
 - ¿Cómo testeamos que ciertas excepciones sean lanzadas?
 
+# Testing con Fechas
+
+- ¿Cómo testeamos código que depende de la fecha actual? Cuidado con el paso del tiempo.

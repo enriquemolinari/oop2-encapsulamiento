@@ -15,27 +15,34 @@
 
 - Dos implementaciones no encapsuladas:
     - Usuario y UsuariosManager
+        - Acoplamiento fuerte entre Usuario y UsuariosManager. Un cambio impacta en ambas clases
+        - Nuevo Requerimiento:
+            - Historial de claves y no podes elegir una clave que ya hayas usado.
+            - Mostrar cuantas clases cambian al agregar nuevo requerimiento si no encapsulo
+            - Refactoring. Encapsular:
+                - "Move instance Method..."
+                - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.
+                - Sacamos los getters. Un objeto que encapsula una password **nunca** deberia tener un getter.
+        - Despues del refactor, el acomplamiento es mas bajo, el mismo cambio no impacta en ambas clases, solo en una.
     - Banco y CuentaBancaria
+        - No se puede cumplir con la invariante.
+        - Aparece código duplicado en Banco y CuentaBancaria.
 - Diseñar en objetos pensando primero en clases vs pensar primero en los mensajes (comportamiento) es un punto de
   inflexión en como diseñamos sistemas orientados a objetos. Cambiar la pregunta fundamental de diseño de "Sé que
   necesito esta clase, ¿qué debería hacer?" a "Necesito enviar este mensaje, ¿quién debería responder a él?” es el
   primer paso en esa dirección. (Sandi Metz)
 - "Encapsular es ortorgar responsabilidades a los objetos correctamente". (Hernan Wilkinson)
     - https://www.youtube.com/watch?v=VEJa7xVfRj4 (Encapsulamiento HW - Nerdearla)
-- Nuevo Requerimiento:
-    - Historial de claves y no podes elegir una clave que ya hayas usado.
-    - Mostrar cuantas clases cambian al agregar nuevo requerimiento si no encapsulo
-- Refactoring. Encapsular:
-    - "Move instance Method..."
-    - Sacamos los setters, creamos constructor. Agrego método en UsuariosManager y delego en Usuario.
-    - Sacamos los getters. Un objeto que encapsula una password **nunca** deberia tener un getter.
-- Implementamos el nuevo requerimiento.
 - Aseguramos invariantes (invariante: condición que debe mantenerse verdadera)
 
-# Tell Don't Ask
+## Tell Don't Ask
 
 - No preguntas por su estado para hacer algo con el. Pedile que lo haga por vos !
 - Básicamente es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.
+- Ejemplo `Paperboy`: Deleguemos, modelemos mejor el problema, no preguntemos por el estado de los objetos para
+  resolverlo nosotros mismos.
+- Ejemplo `Tren`: Deleguemos en Bagon para que resuelva pasandole la info que necesita.
+- Ejemplo `Carrito`: Si necesitamos devolver una variable de instancia mutable, hagamos readonly primero.
 
 # Testing con Exceptions
 

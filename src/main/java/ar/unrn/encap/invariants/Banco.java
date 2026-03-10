@@ -14,13 +14,20 @@ public class Banco {
 
     public void transferir(CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino, float saldo) {
         //Por otro lado, es probable que empiece a duplicar código en Banco, por ejemplo:
-//        var saldoActualOrigen = cuentaOrigen.getSaldo();
-//        cuentaOrigen.setSaldo(saldoActualOrigen - saldo);
-//
-//        var saldoActualDestino = cuentaDestino.getSaldo();
-//        cuentaDestino.setSaldo(saldoActualDestino + saldo);
+        var saldoActualOrigen = cuentaOrigen.getSaldo();
+        cuentaOrigen.setSaldo(saldoActualOrigen - saldo);
+
+        var saldoActualDestino = cuentaDestino.getSaldo();
+        cuentaDestino.setSaldo(saldoActualDestino + saldo);
 //        vs
 //        cuentaOrigen.retirar(saldo);
 //        cuentaDestino.depositar(saldo);
     }
 }
+
+//Importante: duplicar es repetir lógica, conocimiento. Si mañana tengo que cobrar una comision al retirar,
+// de la forma implementada con getters y setters, tengo que ir a cada lugar donde se hace un retiro y agregar
+// la lógica de la comision, en cambio, si tengo el método retirar, solo tengo que agregar la lógica de la comision
+//  en ese método, y no tengo que preocuparme por los lugares donde se hace un retiro, lo que hace que el código sea más
+//   fácil de mantener y por ende menos propenso a errores.
+

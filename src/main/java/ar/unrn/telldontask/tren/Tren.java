@@ -8,6 +8,7 @@ public class Tren {
 
     public void reservarAsiento(PedidoReserva pedido) {
         for (Bagon bagon : bagones) {
+            //invirtamos la logica para que el tren no sepa nada de asientos, solo de bagones
             if (bagon.getAsientos().getPorcentajeRes() < limiteOcupacion) {
                 pedido.reservarAsientoEn(bagon);
                 return;

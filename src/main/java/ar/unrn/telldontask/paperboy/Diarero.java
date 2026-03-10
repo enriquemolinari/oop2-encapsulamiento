@@ -11,6 +11,6 @@ public class Diarero {
 
         //modelamos mejor la vida real
         //Diarero no tiene idea si el cliente paga con una Billetera, con mercado Pago o como sea.
-        //unCliente.cobrar(saladoACobrar);
+        //unCliente.pagar(saladoACobrar);
     }
 }

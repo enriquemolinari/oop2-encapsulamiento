@@ -14,7 +14,7 @@ public class Cliente {
         return billetera;
     }
 
-//    public void cobrar(float saldoACobrar) {
+//    public void pagar(float saldoACobrar) {
 //        this.billetera.sacarEfectivo(saldoACobrar);
 //    }
 }

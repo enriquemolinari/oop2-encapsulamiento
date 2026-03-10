@@ -31,7 +31,7 @@ public class TarjetaCreditoTest {
 
     @Test
     public void test04() {
-        //como testeo estaVencida()?
+        //como testeo estaVencida() == true y estaVencida() == false?
 
     }
 

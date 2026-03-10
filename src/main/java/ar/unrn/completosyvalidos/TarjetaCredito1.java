@@ -1,18 +1,18 @@
 package ar.unrn.completosyvalidos;
 
-import java.time.MonthDay;
+import java.time.YearMonth;
 
 public class TarjetaCredito1 {
     private String numero;
     private String titular;
-    private MonthDay fechaVencimiento;
+    private YearMonth fechaVencimiento;
     private String codigoSeguridad;
 
     public TarjetaCredito1() {
     }
 
     public boolean estaVencida() {
-        MonthDay hoy = MonthDay.now();
+        var hoy = YearMonth.now();
         return fechaVencimiento.isBefore(hoy);
     }
 
@@ -32,11 +32,11 @@ public class TarjetaCredito1 {
         this.titular = titular;
     }
 
-    public MonthDay getFechaVencimiento() {
+    public YearMonth getFechaVencimiento() {
         return fechaVencimiento;
     }
 
-    public void setFechaVencimiento(MonthDay fechaVencimiento) {
+    public void setFechaVencimiento(YearMonth fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
 

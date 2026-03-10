@@ -2,7 +2,7 @@ package ar.unrn.completosyvalidos;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.MonthDay;
+import java.time.YearMonth;
 
 public class TarjetaCreditoTest {
 
@@ -17,7 +17,7 @@ public class TarjetaCreditoTest {
     public void test02() {
         var tarjeta1 = new TarjetaCredito2("1234567890123456",
                 "Juan Perez",
-                MonthDay.of(12, 31),
+                YearMonth.of(12, 31),
                 "123");
         //puede no ser válida...
         tarjeta1.estaVencida();
@@ -27,6 +27,6 @@ public class TarjetaCreditoTest {
     public void test03() {
         //como testeo TarjetaCredito3?
 
-        
+
     }
 }

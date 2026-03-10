@@ -1,14 +1,14 @@
 package ar.unrn.completosyvalidos;
 
-import java.time.MonthDay;
+import java.time.YearMonth;
 
 public class TarjetaCredito3 {
     private String numero;
     private String titular;
-    private MonthDay fechaVencimiento;
+    private YearMonth fechaVencimiento;
     private String codigoSeguridad;
 
-    public TarjetaCredito3(String numero, String titular, MonthDay fechaVencimiento, String codigoSeguridad) {
+    public TarjetaCredito3(String numero, String titular, YearMonth fechaVencimiento, String codigoSeguridad) {
         verificarNumero(numero);
         verificarTitular(titular);
         verificarFechaVencimiento(fechaVencimiento);
@@ -20,7 +20,7 @@ public class TarjetaCredito3 {
     }
 
     public boolean estaVencida() {
-        MonthDay hoy = MonthDay.now();
+        var hoy = YearMonth.now();
         return fechaVencimiento.isBefore(hoy);
     }
 
@@ -36,8 +36,8 @@ public class TarjetaCredito3 {
         }
     }
 
-    private void verificarFechaVencimiento(MonthDay fechaVencimiento) {
-        if (fechaVencimiento == null || fechaVencimiento.isBefore(MonthDay.now())) {
+    private void verificarFechaVencimiento(YearMonth fechaVencimiento) {
+        if (fechaVencimiento == null || fechaVencimiento.isBefore(YearMonth.now())) {
             throw new IllegalArgumentException("Fecha de vencimiento inválida");
         }
     }

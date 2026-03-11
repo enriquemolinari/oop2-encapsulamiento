@@ -15,11 +15,11 @@ public class TarjetaCreditoTest {
 
     @Test
     public void test02() {
-        var tarjeta1 = new TarjetaCredito2("1234567890123456",
+        var tarjeta1 = new TarjetaCredito2("123456",
                 "Juan Perez",
-                YearMonth.of(12, 31),
+                YearMonth.of(2026, 11),
                 "123");
-        //puede no ser válida...
+        //no es válida...
         tarjeta1.estaVencida();
     }
 

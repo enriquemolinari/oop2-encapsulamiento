@@ -27,6 +27,7 @@
     - Banco y CuentaBancaria
         - No se puede cumplir con la invariante.
         - Aparece código duplicado en Banco y CuentaBancaria.
+        - No dejar de onda Setters y Getters públicos.
 - Diseñar en objetos pensando primero en clases vs pensar primero en los mensajes (comportamiento) es un punto de
   inflexión en como diseñamos sistemas orientados a objetos. Cambiar la pregunta fundamental de diseño de "Sé que
   necesito esta clase, ¿qué debería hacer?" a "Necesito enviar este mensaje, ¿quién debería responder a él?” es el
@@ -37,6 +38,7 @@
 
 ## Tell Don't Ask
 
+- Se le atribuye a Alec Sharp en el libro Smalltalk by Example.
 - No preguntas por su estado para hacer algo con el. Pedile que lo haga por vos !
 - Básicamente es una técnica para tener buen encapsulamiento, para evitar objetos anémicos.
 - Ejemplo `Paperboy`: Deleguemos, modelemos mejor el problema, no preguntemos por el estado de los objetos para
